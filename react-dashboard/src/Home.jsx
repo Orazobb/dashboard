@@ -17,6 +17,9 @@ import {
   LineChart,
   Line,
 } from "recharts";
+
+import RadialBarChartExample from "./RadialBarChart";
+
 function Home() {
   const data = [
     {
@@ -152,6 +155,7 @@ function Home() {
           </LineChart>
         </ResponsiveContainer>
       </div>
+      <RadialBarChartExample />
     </main>
   );
 }

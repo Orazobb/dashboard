@@ -17,6 +17,7 @@ import Products from "./pages/Products";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 
+
 function SideBar({ openSideBarToggle, OpenSideBar }) {
   return (
     <aside
