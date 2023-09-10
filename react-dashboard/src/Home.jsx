@@ -21,44 +21,44 @@ function Home() {
   const data = [
     {
       name: "Page A",
-      uv: 4000,
-      pv: 2400,
+      Galla: 4000,
+      Pagta: 2400,
       amt: 2400,
     },
     {
       name: "Page B",
-      uv: 3000,
-      pv: 1398,
+      Galla: 3000,
+      Pagta: 1398,
       amt: 2210,
     },
     {
       name: "Page C",
-      uv: 2000,
-      pv: 9800,
+      Galla: 2000,
+      Pagta: 9800,
       amt: 2290,
     },
     {
       name: "Page D",
-      uv: 2780,
-      pv: 3908,
+      Galla: 2780,
+      Pagta: 3908,
       amt: 2000,
     },
     {
       name: "Page E",
-      uv: 1890,
-      pv: 4800,
+      Galla: 1890,
+      Pagta: 4800,
       amt: 2181,
     },
     {
       name: "Page F",
-      uv: 2390,
-      pv: 3800,
+      Galla: 2390,
+      Pagta: 3800,
       amt: 2500,
     },
     {
       name: "Page G",
-      uv: 3490,
-      pv: 4300,
+      Galla: 3490,
+      Pagta: 4300,
       amt: 2100,
     },
   ];
@@ -120,8 +120,8 @@ function Home() {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="pv" fill="#8884ff" />
-            <Bar dataKey="uv" fill="#22ca9d" />
+            <Bar dataKey="Pagta" fill="#2222e2" />
+            <Bar dataKey="Galla" fill="#22ca9d" />
           </BarChart>
         </ResponsiveContainer>
 
@@ -144,11 +144,11 @@ function Home() {
             <Legend />
             <Line
               type="monotone"
-              dataKey="pv"
+              dataKey="Pagta"
               stroke="#0000FF"
               activeDot={{ r: 8 }}
             />
-            <Line type="monotone" dataKey="uv" stroke="#FF0000" />
+            <Line type="monotone" dataKey="Galla" stroke="#FF0000" />
           </LineChart>
         </ResponsiveContainer>
       </div>

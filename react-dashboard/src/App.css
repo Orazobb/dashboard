@@ -20,6 +20,12 @@ body {
 .icon_header {
   margin-right: 5px;
 }
+.icon:hover {
+  cursor: pointer;
+}
+.card_icon:hover {
+  cursor: pointer;
+}
 .close_icon {
   color: red;
   margin-left: 30px;

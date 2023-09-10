@@ -8,7 +8,14 @@ import {
   BsMenuButtonWideFill,
   BsFillGearFill,
 } from "react-icons/bs";
-import { ImCancelCircle } from "react-icons/im";
+import { Route, Routes, NavLink } from "react-router-dom";
+import DashBoard from "./pages/DashBoard";
+import Categories from "./pages/Categories";
+import Customers from "./pages/Customers";
+import Inventory from "./pages/Inventory";
+import Products from "./pages/Products";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 
 function SideBar({ openSideBarToggle, OpenSideBar }) {
   return (
@@ -24,46 +31,56 @@ function SideBar({ openSideBarToggle, OpenSideBar }) {
         <span className="icon close_icon" onClick={OpenSideBar}>
           x
         </span>
-        {/* <ImCancelCircle onClick={OpenSideBar} /> */}
       </div>
 
       <ul className="sidebar-list">
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/dashboard">
             <BsGrid1X2Fill className="icon" /> Dashboard
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/products">
             <BsFillArchiveFill className="icon" /> Products
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/categories">
             <BsFillGrid3X3GapFill className="icon" /> Categories
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/customers">
             <BsPeopleFill className="icon" /> Customers
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/inventory">
             <BsListCheck className="icon" /> Inventory
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/reports">
             <BsMenuButtonWideFill className="icon" /> Reports
-          </a>
+          </NavLink>
         </li>
         <li className="sidebar-list-item">
-          <a href="#">
+          <NavLink to="/settings">
             <BsFillGearFill className="icon" /> Settings
-          </a>
+          </NavLink>
         </li>
       </ul>
+
+      <Routes>
+        {/* <Route path="/" element={<SideBar />}></Route> */}
+        <Route path="/dashboard" element={<DashBoard />}></Route>
+        <Route path="/categories" element={<Categories />}></Route>
+        <Route path="/customers" element={<Customers />}></Route>
+        <Route path="/inventory" element={<Inventory />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/reports" element={<Reports />}></Route>
+        <Route path="/settings" element={<Settings />}></Route>
+      </Routes>
     </aside>
   );
 }
